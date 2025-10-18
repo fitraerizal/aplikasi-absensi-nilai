@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /absennilai/
+
+# Paksa HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect ke public jika hanya membuka folder absennilai
+RewriteCond %{REQUEST_URI} ^/absennilai/?$
+RewriteRule ^(.*)$ /absennilai/public/ [L,R=301]

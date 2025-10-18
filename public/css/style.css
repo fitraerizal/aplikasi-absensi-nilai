@@ -1,0 +1,32 @@
+.jumbotron-wavy-bg {
+  /* Mengatur tinggi agar penuh satu layar */
+  height: 100vh; 
+  
+  /* Pengaturan gambar latar belakang (tetap sama) */
+  background-image: url('https://lfeinformatika.xo.je/absennilai/public/img/wavy-background.svg');
+  background-color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* Ini penting untuk membuat lapisan overlay */
+  position: relative; 
+}
+
+/* Lapisan semi-transparan di atas gambar */
+.jumbotron-wavy-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ 
+  
+}
+
+/* Pastikan semua konten berada di atas lapisan overlay */
+.jumbotron-content {
+  position: relative;
+ 
+}
